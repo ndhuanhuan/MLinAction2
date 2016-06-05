@@ -25,7 +25,7 @@ public:
     int get(int key) {
         if(keyToNode.count(key)==0) return -1;
         moveToEnd(key);
-        return keyToNode[key]->val
+        return keyToNode[key]->val;
     }
 
     void set(int key, int value) {
