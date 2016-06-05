@@ -45,7 +45,7 @@ public:
 
     void insertToEnd(int key,int value)
     {
-        if(isFull||keyToNode.count(key)!=0)
+        if(isFull()||keyToNode.count(key)!=0)
         {
             return;
         }
