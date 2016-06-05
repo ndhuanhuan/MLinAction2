@@ -75,7 +75,7 @@ public:
             head = head->next;
             head->prev = NULL;
         }
-        delete temp
+        delete temp;
     }
     
     void moveToEnd(int key)
