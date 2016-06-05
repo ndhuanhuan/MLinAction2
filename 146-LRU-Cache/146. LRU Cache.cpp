@@ -94,7 +94,7 @@ public:
         }
         
         tail->next = nd;
-        nd->prev = nd;
+        nd->prev = tail;
         nd->next =NULL;
         tail = tail->next;
     
