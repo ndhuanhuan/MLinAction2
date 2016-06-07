@@ -12,26 +12,26 @@ public:
         while(root)
         {
             TreeLinkNode* next = NULL, prev=NULL;
-            for(;n;n=n->next)
+            for(;root;root=root->next)
             {
                 if(!next)
-                    next = n->left?n->left:n->right;
-                    if(n->left)
+                    next = root->left?root->left:root->right;
+                    if(root->left)
                     {
-                        if(prev) prev->next = n->left;
-                        prev = n->left;
+                        if(prev) prev->next = root->left;
+                        prev = root->left;
                     }
-                    if(n->right)
+                    if(root->right)
                     {
-                        if(prev) prev->next = n->right;
-                        prev = n->right;
+                        if(prev) prev->next = root->right;
+                        prev = root->right;
                     }
 
 
 
             }
 
-            n=next;
+            root=next;
 
         }
     }
