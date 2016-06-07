@@ -18,12 +18,12 @@ public:
                     next = root->left?root->left:root->right;
                     if(root->left)
                     {
-                        if(prev) prev->next = root->left;
+                        if(prev!=NULL) prev->next = root->left;
                         prev = root->left;
                     }
                     if(root->right)
                     {
-                        if(prev) prev->next = root->right;
+                        if(prev!=NULL) prev->next = root->right;
                         prev = root->right;
                     }
 
