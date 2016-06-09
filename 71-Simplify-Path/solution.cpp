@@ -34,3 +34,4 @@ public:
         if(ret.empty()) ret = "/";
         return ret;
     }
+};
