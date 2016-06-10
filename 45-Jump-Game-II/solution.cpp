@@ -6,7 +6,7 @@ public:
         while(curMax<n-1) {
             int lastMax = curMax;
             for(; i<=lastMax; i++) 
-                curMax = max(curMax,i+A[i]);
+                curMax = max(curMax,i+nums[i]);
             njumps++;
             if(lastMax == curMax) return -1;
         }
