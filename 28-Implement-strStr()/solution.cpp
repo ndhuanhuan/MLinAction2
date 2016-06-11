@@ -1,18 +1,18 @@
 class Solution {
 public:
-    int strStr(char *haystack, char *needle) {
-        if(!*needle) return 0;
-        if(!*haystack) return -1;
-        int m = strlen(haystack), n = strlen(needle);
-        
-        for(int i=0; i<=m-n; i++) {
-            for(int j=0; j<=n; j++) {
-                char *p1 = haystack+i+j;
-                char *p2 = needle+j;
-                if(!*p2) return i;
-                if(*p1 != *p2) break;
-            }
-        }
-        return -1;
-    }
+int strStr(const string& haystack, const string& needle) {
+if (needle.empty()) return 0;
+const int N = haystack.size() - needle.size() + 1;
+for (int i = 0; i < N; i++) {
+int j = i;
+int k = 0;
+while (j < haystack.size() && k < needle.size() && haystack[j] == needle[k]) {
+j++;
+k++;
+}
+if (k == needle.size()) return i;
+}
+return -1;
+}
 };
+
