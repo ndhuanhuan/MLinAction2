@@ -4,6 +4,7 @@ public:
 		int n = nums.size();
 		vector<vector<int>> result;
 		vector<int> path;
+		sort(nums.begin(),nums.end());
 		vector<bool> used(nums.size(), false);
 		dfs(nums,used, path, result);
 		return result;
