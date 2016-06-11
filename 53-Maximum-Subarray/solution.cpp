@@ -1,6 +1,7 @@
 class Solution {
 public:
-    int maxSubArray(int A[], int n) {
+    int maxSubArray(vector<int>& nums) {
+        int n = nums.size();
         if(n<=0) return 0;
         int maxSum = A[0], curSum = A[0];
         for(int i=1; i<n; i++) {
@@ -10,3 +11,5 @@ public:
         return maxSum;
     }
 };
+
+
