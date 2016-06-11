@@ -6,6 +6,7 @@ public:
 		vector<int> path;
 		vector<bool> used(nums.size(), false);
 		dfs(nums,used, path, result);
+		return result;
 	}
 
 	void dfs(const vector<int>& nums, vector<bool> &used, vector<int> &path, vector<vector<int> > &result)
