@@ -20,7 +20,7 @@ public:
 			}
 			else 
 			{
-				if (nums[mid]<target&&target<nums[last-1]) 
+				if (nums[mid]<target&&target=<nums[last-1]) 
 				{
 					first = mid + 1;
 				}
@@ -30,6 +30,6 @@ public:
 				}
 			}
 		}
-
+        return -1;
 	}
 };
