@@ -5,6 +5,7 @@ public:
 		vector<vector<int>> result;
 		vector<int> path;
 		dfs(nums, path, result);
+		return result;
 	}
 
 	void dfs(const vector<int>& nums, vector<int> &path, vector<vector<int> > &result)
