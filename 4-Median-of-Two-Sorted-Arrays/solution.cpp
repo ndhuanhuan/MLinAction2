@@ -7,11 +7,11 @@ public:
 			int total = m + n;
 			if (total & 0x1)
 			{
-				return;
+				return find_kth(nums1.begin(),m,nums2.begin(),n,total/2+1);
 			}
 			else
 			{
-				return;
+				return (find_kth(nums1.begin(),m,nums2.begin(),n,total/2+1)+find_kth(nums1.begin(),m,nums2.begin(),n,total/2))/2.0;
 			}
 		}
 
