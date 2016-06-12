@@ -29,8 +29,8 @@ public:
 			}
 			ListNode* tempNode = new ListNode(tempVal);
 			p->next = tempNode;
-			p1 = p1->next;
-			p2 = p2->next;
+			p1 = p1 == nullptr ? nullptr : p1->next,
+            p2 = p2 == nullptr ? nullptr : p2->next,
 			p = p->next;
 		}
 		if (carry > 0)
