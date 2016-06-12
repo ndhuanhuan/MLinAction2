@@ -17,7 +17,7 @@ public:
 		{
 		    const int ai = p1 == nullptr ? 0 : p1->val;
             const int bi = p2 == nullptr ? 0 : p2->val;
-			int tempVal =a1+bi+carry;
+			int tempVal =ai+bi+carry;
 			if (tempVal >= 10) 
 			{
 				carry = 1;
