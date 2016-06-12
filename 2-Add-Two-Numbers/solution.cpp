@@ -31,6 +31,8 @@ public:
 			p2 = p2->next;
 			p = p->next;
 		}
+		if (carry > 0)
+            p->next = new ListNode(carry);
 		return dummy.next;
 	}
 };
