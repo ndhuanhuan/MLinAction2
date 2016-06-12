@@ -15,7 +15,9 @@ public:
 		ListNode *p1 = l1, *p2 = l2;
 		while (p1!=nullptr || p2!=nullptr) 
 		{
-			int tempVal = l1->val + l2->val+carry;
+		    const int ai = p1 == nullptr ? 0 : p1->val;
+            const int bi = p2 == nullptr ? 0 : p2->val;
+			int tempVal =a1+bi+carry;
 			if (tempVal >= 10) 
 			{
 				carry = 1;
