@@ -10,7 +10,7 @@ class Solution {
 public:
 	struct compNode 
 	{
-		bool compare(ListNode* l1, ListNode* l2) 
+		bool compare(ListNode* l1, ListNode* l2)  const
 		{
 			if (l1->val >= l2->val) 
 			{
