@@ -18,5 +18,6 @@ public:
 				break;
 			}
 		}
+		return result;
 	}
 };
