@@ -10,7 +10,7 @@ public:
         for(auto i=nums.begin();i<last-2;i++)
         {
             auto j=i+1;
-            //if(i>nums.begin()&&*i==*(i-1)) continue;
+            if(i>nums.begin()&&*i==*(i-1)) continue;
             auto k=last-1;
             while(j<k)
             {
