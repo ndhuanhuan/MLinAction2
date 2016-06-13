@@ -32,6 +32,7 @@ public:
                     while(*j == *(j - 1) && *k == *(k + 1) && j < k) ++j;
                 }
 
+            }
         }
         return result;
     }
