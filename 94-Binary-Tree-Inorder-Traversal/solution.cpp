@@ -11,6 +11,8 @@ class Solution {
 public:
     vector<int> inorderTraversal(TreeNode* root) {
         vector<int> result;
+        inorderTrav(root,result);
+        return result;
         
     }
     void inorderTrav(TreeNode *root,vector<int> &result)
