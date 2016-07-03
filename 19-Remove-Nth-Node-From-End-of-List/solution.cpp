@@ -9,7 +9,7 @@
 class Solution {
 public:
 	ListNode *removeNthFromEnd(ListNode *head, int n) {
-		ListNode dummy{-1,head};
+		ListNode dummy(-1);
 		dummy.next = head;
 		ListNode *p = &dummy, *q = &dummy;
 		for (int i = 0; i < n; i++) 
