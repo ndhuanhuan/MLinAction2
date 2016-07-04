@@ -1,6 +1,6 @@
 class Solution {
 public:
-	vector<vector<int> > combinationSum(vector<int> &nums, int target) {
+	vector<vector<int> > combinationSum2(vector<int> &nums, int target) {
 		sort(nums.begin(), nums.end());
 		vector<vector<int> > result; 
 		vector<int> path; 
@@ -16,11 +16,11 @@ private:
 		}
 		int prev = -1;
 		for (size_t i = start; i < nums.size(); i++) { 
-			if (prev == nums[i]) return;
+			if (prev == nums[i]) continue;
 			if (gap < nums[i]) return; 
 			prev = nums[i];
 			path.push_back(nums[i]); 
-			dfs(nums, path, result, gap - nums[i], i);
+			dfs(nums, path, result, gap - nums[i], i+1);
 			path.pop_back(); 
 		}
 	}
