@@ -3,7 +3,7 @@ public:
     int countComponents(int n, vector<pair<int, int> >& edges) {
         root = vector<int>(n, -1);
         int size = edges.size();
-        int count = n;
+        //int count = n;
         for(int i = 0; i < size; ++i)
         {
             int u = edges[i].first;
