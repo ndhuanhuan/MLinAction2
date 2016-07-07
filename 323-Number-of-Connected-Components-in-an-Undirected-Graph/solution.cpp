@@ -12,11 +12,16 @@ public:
             int vroot = findRoot(v);
             if(uroot != vroot)
             {
-                --count;
+                //--count;
                 unionSet(uroot, u, vroot, v);
             }
         }
-        
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            if (id[i] == i)
+                count++;
+        }
+        //return count;
         return count;
     }
 private:
