@@ -27,3 +27,4 @@ prev = root->right;
 root = next; // turn to next level
 }
 }
+};
