@@ -9,21 +9,21 @@ public:
         if(n<=0) return 0;
         if(n==1) return 1;
         int left=0, right=n;
-        int cur =(left+right)/2;
-        int result = guess(cur);
+        
         while(result!=0)
-        {
+        {   
+            int mid = left + (right - left) / 2;
+            int result = guess(mid);
             if(result==-1)
             {
-                left=(left+right)/2+1;
-                cur =(left+right)/2;
+                right=(left+right)/2+1;
+                mid =(left+right)/2;
             }
-            else
+            else if(result==1)
             {
-               right=(left+right)/2-1;
-                cur =(left+right)/2;
+               left=(left+right)/2-1;
+                mid =(left+right)/2;
             }
-            result = guess(cur);
         }
         return cur; 
     }
