@@ -8,17 +8,20 @@ public:
     int guessNumber(int n) {
         if(n<=0) return 0;
         if(n==1) return 1;
-        int cur =n/2;
+        int left=0, right=n;
+        int cur =(left+right)/2;
         int result = guess(cur);
         while(result!=0)
         {
             if(result==-1)
             {
-                cur = cur*3/4;
+                left=(left+right)/2;
+                cur =(left+right)/2;
             }
             else
             {
-                cur=cur/2;
+               right=(left+right)/2;
+                cur =(left+right)/2;
             }
             result = guess(cur);
         }
