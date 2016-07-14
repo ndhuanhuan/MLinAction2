@@ -9,10 +9,10 @@ public:
         if(n<=0) return 0;
         if(n==1) return 1;
         int left=0, right=n;
-        int result;
+        int result,mid;
         while(result!=0)
         {   
-            int mid = left + (right - left) / 2;
+            mid = left + (right - left) / 2;
             result = guess(mid);
             if(result==-1)
             {
