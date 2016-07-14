@@ -20,7 +20,7 @@ public:
             }
             else
             {
-               right=(left+right)/2;
+               right=(left+right)/2-1;
                 cur =(left+right)/2;
             }
             result = guess(cur);
