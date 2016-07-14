@@ -9,20 +9,18 @@ public:
         if(n<=0) return 0;
         if(n==1) return 1;
         int left=0, right=n;
-        
+        int result;
         while(result!=0)
         {   
             int mid = left + (right - left) / 2;
-            int result = guess(mid);
+            result = guess(mid);
             if(result==-1)
             {
-                right=(left+right)/2+1;
-                mid =(left+right)/2;
+                right=mid-1
             }
             else if(result==1)
             {
-               left=(left+right)/2-1;
-                mid =(left+right)/2;
+               left=mid+1;
             }
         }
         return cur; 
