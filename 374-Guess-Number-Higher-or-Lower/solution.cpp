@@ -15,7 +15,7 @@ public:
         {
             if(result==-1)
             {
-                left=(left+right)/2;
+                left=(left+right)/2+1;
                 cur =(left+right)/2;
             }
             else
