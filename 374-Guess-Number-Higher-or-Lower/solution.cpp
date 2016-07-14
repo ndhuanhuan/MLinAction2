@@ -16,13 +16,13 @@ public:
             result = guess(mid);
             if(result==-1)
             {
-                right=mid-1
+                right=mid-1;
             }
             else if(result==1)
             {
                left=mid+1;
             }
         }
-        return cur; 
+        return mid; 
     }
 };
