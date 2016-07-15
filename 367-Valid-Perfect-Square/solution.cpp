@@ -1,8 +1,8 @@
 class Solution {
 public:
     bool isPerfectSquare(int num) {
-        long long l=1;
-        long long r=num/2+1;
+        int l=1;
+        int r=num/2+1;
         if(num==0||num==1) return true;
         while(l<=r)
         {
