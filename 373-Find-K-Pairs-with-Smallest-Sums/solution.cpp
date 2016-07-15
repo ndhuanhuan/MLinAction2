@@ -27,7 +27,7 @@ public:
 	
 	struct cmp
 	{
-		bool operator() (pair<int> &a, pair<int> &b)
+		bool operator() (pair<int,int> &a, pair<int,int> &b)
 		{
 			return a.first+a.second<b.first+b.second;
 		}
