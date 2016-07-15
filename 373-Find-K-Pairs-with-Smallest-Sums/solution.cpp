@@ -3,9 +3,9 @@ public:
     vector<pair<int, int>> kSmallestPairs(vector<int>& nums1, vector<int>& nums2, int k) {
         vector<pair<int,int>> res;
 		priority_queue<pair<int,int>, vector<pair<int,int>>, cmp> q;
-		for(int i=0 ; i<min((int)nums1.size,k); ++i )
+		for(int i=0 ; i<min((int)nums1.size(),k); ++i )
 		{
-			for(int j;j < min((int)nums2.size,k);++j)
+			for(int j=0;j < min((int)nums2.size(),k);++j)
 			{
 				if(q.size()<k)
 				{
