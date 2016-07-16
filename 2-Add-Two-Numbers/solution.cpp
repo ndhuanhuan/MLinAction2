@@ -8,7 +8,8 @@
  */
 class Solution {
 public:
-    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) 
+    {
         ListNode dummy(-1);
         ListNode *p= &dummy;
         int carry =0;
@@ -39,4 +40,5 @@ public:
             
         }                                                                                                                           
         return dummy.next;
+    }
 };
