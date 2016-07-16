@@ -22,13 +22,14 @@ public:
             return find_kth(B,n2, A, n1,k);
         }
         if(n1==0) return *(B+k-1);
+        if(k==1) return min(*A,*B);
         int ia = min(n1,k/2);
         int ib = k-ia;
         if(*(A+ia-1)<*(B+ib-1))
         {
             return find_kth(A+ia,n1-ia,B,n2,k-ia);
         }
-        else if(*(A+ia-1)<*(B+ib-1))
+        else if(*(A+ia-1)>*(B+ib-1))
         {
             return find_kth(A, n1, B + ib, n2 - ib, k - ib);
         }
