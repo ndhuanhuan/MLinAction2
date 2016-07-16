@@ -30,7 +30,7 @@ public:
         }
         else if(*(A+ia-1)<*(B+ib-1))
         {
-            return find_kth(A, m, B + ib, n - ib, k - ib);
+            return find_kth(A, n1, B + ib, n2 - ib, k - ib);
         }
         else
             return A[ia-1]; 
