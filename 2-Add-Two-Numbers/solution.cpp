@@ -28,7 +28,7 @@ public:
             {
                 carry=0;
             }
-            ListNode* tempNode = new ListNode(tempValue);
+            ListNode* tempNode = new ListNode(tempVal);
             p->next= tempNode;
             p1 = p1==nullptr? nullptr: p1->next;
             p2 = p2==nullptr? nullptr: p2->next;
