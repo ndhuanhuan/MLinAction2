@@ -9,7 +9,7 @@ public:
         {
             for(int j=i ; j<n; j++)
             {
-                if((i+>j-1 || isPal[i+1][j-1])&&s[i]==s[j])
+                if((i+1>j-1 || isPal[i+1][j-1])&&s[i]==s[j])
                 {
                     isPal[i][j] = true;
                     if(j-i+1>maxLen)
