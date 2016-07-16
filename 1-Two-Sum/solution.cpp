@@ -12,8 +12,8 @@ public:
            const int gap= target-nums[i];
            if(mapping.find(gap)!=mapping.end()&&mapping[gap]>i)
            {
-               result.push(i);
-               result.push(mapping[gap]);
+               result.push_back(i);
+               result.push_back(mapping[gap]);
                break;
            }
         }
