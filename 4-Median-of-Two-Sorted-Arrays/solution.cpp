@@ -7,11 +7,11 @@ public:
         int total =n1+n2;
         if(total&0x1)
         {
-            return find_kth(nums1,n1,nums2,n2, total/2+1);
+            return find_kth(nums1.begin(),n1,nums2.begin(),n2, total/2+1);
         }
         else
         {
-            return (find_kth(nums1,n1,nums2,n2, total/2+1)+find_kth(nums1,n1,nums2,n2, total/2))/2.0;
+            return (find_kth(nums1.begin(),n1,nums2.begin(),n2, total/2+1)+find_kth(nums1.begin(),n1,nums2.begin(),n2, total/2))/2.0;
         }
     }
     
