@@ -14,7 +14,7 @@ public:
            {
                result.push_back(i);
                result.push_back(mapping[gap]);
-               break;
+               continue;
            }
         }
         return result;
