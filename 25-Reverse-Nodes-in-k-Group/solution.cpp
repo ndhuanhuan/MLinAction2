@@ -20,6 +20,7 @@ public:
             }
             if(end == nullptr) break;
             prev = reverse(prev,prev->next,end);
+            return dummy.next;
         }
         
         ListNode* reverse(ListNode *prev, ListNode *begin, ListNode *end)
