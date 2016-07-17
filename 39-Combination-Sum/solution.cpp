@@ -8,7 +8,7 @@ public:
         return result;
     }
     
-    oid dfs(vector<int>& nums, vector<int>& path, vector<vector<int> > &result,
+    void dfs(vector<int>& nums, vector<int>& path, vector<vector<int> > &result,
 		int gap, int start) {
         if (gap == 0) { 
 			result.push_back(path);
