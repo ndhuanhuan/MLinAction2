@@ -26,7 +26,7 @@ public:
                 }
                 else
                 {
-                    result.push({*i,*j,*k});
+                    result.push_back({*i,*j,*k});
                     ++j;
                     --k;
                     while(*j==*(j-1)&&j<k) ++j;
