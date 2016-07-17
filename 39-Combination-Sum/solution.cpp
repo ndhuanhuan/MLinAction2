@@ -3,7 +3,7 @@ public:
     vector<vector<int>> combinationSum(vector<int>& nums, int target) {
         sort(nums.begin(),nums.end());
         vector<vector<int>> result;
-        vector<int> path
+        vector<int> path;
         dfs(nums, path, result, target, 0);
         return result;
     }
