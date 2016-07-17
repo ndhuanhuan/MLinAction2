@@ -27,7 +27,7 @@ public:
      ListNode* reverse(ListNode *prev, ListNode *begin, ListNode *end)
         {
             ListNode *end_next = end->next;
-            for(ListNode *p = begin, cur = p->next, next = cur->next;
+            for(ListNode *p = begin, *cur = p->next, *next = cur->next;
                 cur! = end_next;
                 p = cur; cur =next; next = next? next->next: nullptr
             )
