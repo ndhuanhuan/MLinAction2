@@ -14,14 +14,14 @@ public:
         dummy.next = head;
         for(ListNode *prev=&dummy, *end = head; end; end = prev->next)
         {
-            for (int i=0; i<k&&end; i++)
+            for (int i=0; i<k-1&&end; i++)
             {
                 end = end->next;
             }
             if(end == nullptr) break;
             prev = reverse(prev,prev->next,end);
-            return dummy.next;
         }
+        return dummy.next;
     }
     
      ListNode* reverse(ListNode *prev, ListNode *begin, ListNode *end)
