@@ -1,16 +1,16 @@
 class Solution {
 public:
-	vector<vector<int> > combinationSum(vector<int> &nums, int target) {
-		sort(nums.begin(), nums.end());
-		vector<vector<int> > result; 
-		vector<int> path; 
-		dfs(nums, path, result, target, 0);
-		return result;
-	}
-private:
-	void dfs(vector<int>& nums, vector<int>& path, vector<vector<int> > &result,
+    vector<vector<int>> combinationSum(vector<int>& nums, int target) {
+        sort(nums.begin(),nums.end());
+        vector<vector<int>> result;
+        vector<int> path
+        dfs(nums, path, result, target, 0);
+        return result;
+    }
+    
+    oid dfs(vector<int>& nums, vector<int>& path, vector<vector<int> > &result,
 		int gap, int start) {
-		if (gap == 0) { 
+        if (gap == 0) { 
 			result.push_back(path);
 			return;
 		}
@@ -20,5 +20,5 @@ private:
 			dfs(nums, path, result, gap - nums[i], i);
 			path.pop_back(); 
 		}
-	}
+    }
 };
