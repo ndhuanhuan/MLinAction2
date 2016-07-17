@@ -31,7 +31,7 @@ public:
                 cur != end_next;
                 p = cur, cur =next, next = next? next->next: nullptr)
             {
-              cur ->next = p   
+              cur ->next = p;  
             }
             begin->next = end_next;
             prev->next = end;
