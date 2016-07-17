@@ -11,7 +11,7 @@ public:
             }
             if(nums[first] <= nums[mid])
             {
-                if(nums[first]<=target && nums[mi]d > target)
+                if(nums[first]<=target && nums[mid] > target)
                 {
                     last = mid;
                 }
