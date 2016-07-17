@@ -39,6 +39,6 @@ public:
 			pq.pop();
 			if (tail->next) pq.push(tail->next);
 		}
-		return dummy->next;
+		return dummy.next;
     }
 };
