@@ -8,7 +8,7 @@
  */
 class Solution {
 public:
-    stuct compNode
+    struct compNode
     {
         bool operator()(ListNode* l1, ListNode* l2) const
         {
