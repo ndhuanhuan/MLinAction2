@@ -14,7 +14,7 @@ public:
             {
                 if(stk.empty()||stk.top()!=left[right.find(c)])
                 {
-                    return false
+                    return false;
                 }
                 else
                 {
