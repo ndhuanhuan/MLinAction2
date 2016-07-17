@@ -25,7 +25,7 @@ public:
             {
                 return sign==-1?INT_MIN:INT_MAX;
             }
-            num = num*10+num[i]-'0';
+            num = num*10+str[i]-'0';
         }
         
         return sign*num;
