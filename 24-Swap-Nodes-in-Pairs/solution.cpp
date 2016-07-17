@@ -22,6 +22,7 @@ public:
             cur->next = next->next;
             next ->next =cur;
         }
+        return dummy.next;
     }
-    return dummy->next;
+    
 };
