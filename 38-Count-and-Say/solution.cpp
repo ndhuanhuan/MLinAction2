@@ -19,7 +19,7 @@ public:
                     temp+=to_string(count);
                     temp+=prev;
                     count =1;
-                    prev = ret[j]
+                    prev = ret[j];
                 }
             }
              temp+=to_string(count);
