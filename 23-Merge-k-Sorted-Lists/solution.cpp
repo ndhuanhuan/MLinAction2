@@ -12,7 +12,7 @@ public:
     {
         bool operator()(ListNode* l1, ListNode* l2) const
         {
-            if(l1->val>=l2)
+            if(l1->val>=l2->val)
             {
                 return true;
             }
