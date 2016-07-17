@@ -22,8 +22,9 @@ public:
             prev = reverse(prev,prev->next,end);
             return dummy.next;
         }
-        
-        ListNode* reverse(ListNode *prev, ListNode *begin, ListNode *end)
+    }
+    
+     ListNode* reverse(ListNode *prev, ListNode *begin, ListNode *end)
         {
             ListNode *end_next = end->next;
             for(ListNode *p = begin, cur = p->next, next = cur->next;
@@ -37,5 +38,4 @@ public:
             prev->next = end;
             return begin;
         }
-    }
 };
