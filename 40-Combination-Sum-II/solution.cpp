@@ -23,7 +23,7 @@ public:
             if(gap<nums[i]) return;
             prev = nums[i];
             path.push_back(nums[i]);
-            dfs(nums,path,result,target-nums[i],i+1);
+            dfs(nums,path,result,gap-nums[i],i+1);
             path.pop_back();
         }
     }
