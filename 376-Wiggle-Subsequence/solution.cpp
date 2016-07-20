@@ -64,6 +64,6 @@ public:
                  }
             }
         }
-        return dp[n];
+        return maxLength;
     }
 };
