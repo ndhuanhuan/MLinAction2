@@ -24,8 +24,8 @@ public:
 			if (gap == root->val)
 				result.push_back(path);
 		}
-		dfs(root->left,gap-root->val, result);
-		dfs(root->right,gap-root->val, result);
+		dfs(root->left,gap-root->val, path, result);
+		dfs(root->right,gap-root->val,path, result);
 		path.pop_back();
     }
 };
