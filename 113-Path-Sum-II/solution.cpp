@@ -22,7 +22,7 @@ public:
         path.push_back(root->val);
         if (root->left == nullptr && root->right == nullptr) { // leaf
 			if (gap == root->val)
-				result.push_back(cur);
+				result.push_back(path);
 		}
 		dfs(root->left,gap-root->val, result);
 		dfs(root->right,gap-root->val, result);
