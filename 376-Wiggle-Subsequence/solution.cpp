@@ -4,16 +4,17 @@ public:
         const int n = nums.size();
         if(n<=1) return n;
         int i=1;
-        int dp[n];
+        vector<int> dp(n,0);
         while(nums[i]==nums[i-1]&&i<n) i++;
         int increase = nums[i]>nums[i-1]? 1:-1;
-        int maxLength = INT_MIN;
+        int maxLength = -1;
         increase *=-1;
         //first is increasing
-        for(int j=0;j<=i;j++)
+        for(int j=0;j<i;j++)
         {
             dp[j]=1;
         }
+        dp[i]=2;
         i++;
         for(;i<n;i++)
         {
@@ -24,7 +25,7 @@ public:
                      //correct
                     dp[i+1] = dp[i]+1;
                     maxLength = max(maxLength,dp[i+1]);
-                    increase =1;
+                    increase =-1;
                 }
                 else
                 {
@@ -40,7 +41,7 @@ public:
                     //correct
                     dp[i+1] = dp[i]+1;
                     maxLength = max(maxLength,dp[i+1]);
-                    increase =1
+                    increase =1;
                 } 
                 else
                 {
