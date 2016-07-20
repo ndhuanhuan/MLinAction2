@@ -9,23 +9,23 @@
  */
 class Solution {
 public:
-	vector<vector<int> > pathSum(TreeNode *root, int sum) {
-		vector<vector<int> > result;
-		vector<int> cur; // í¯€í½œí¯’í¼£í¯í°‚í¯‡í³‹
-		pathSum(root, sum, cur, result);
-		return result;
-	}
-private:
-	void pathSum(TreeNode *root, int gap, vector<int> &cur,
-		vector<vector<int> > &result) {
-		if (root == nullptr) return;
-		cur.push_back(root->val);
-		if (root->left == nullptr && root->right == nullptr) { // leaf
+    vector<vector<int>>  pathSum(TreeNode* root, int sum) {
+         vector<vector<int>> result;
+         vector<int> path;
+         dfs(root,sum,path,result);
+         return result;
+    }
+    
+    void dfs(TreeNode* root, int gap, vector<int> &path, vector<vector<int> > &result)
+    {
+        if(root==nullptr) return;
+        path.push_back(root->val);
+        if (root->left == nullptr && root->right == nullptr) { // leaf
 			if (gap == root->val)
 				result.push_back(cur);
 		}
-		pathSum(root->left, gap - root->val, cur, result);
-		pathSum(root->right, gap - root->val, cur, result);
-		cur.pop_back();
-	}
+		dfs(root->left,gap-root->val, result);
+		dfs(root->right,gap-root->val, result);
+		path.pop_back();
+    }
 };
