@@ -13,12 +13,11 @@ public:
 		if (root == nullptr) return; // 
 		flatten(root->left);
 		flatten(root->right);
-		if (nullptr == root->left) return;
-		//  
+		if(root->left==nullptr) return;
 		TreeNode *p = root->left;
-		while (p->right) p = p->right; // 
+		while(p->right) p = p->right;
 		p->right = root->right;
 		root->right = root->left;
-		root->left = nullptr;
+		root->left =nullptr;
 	}
 };
