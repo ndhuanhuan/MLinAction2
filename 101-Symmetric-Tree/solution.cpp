@@ -14,7 +14,7 @@ public:
         stack<TreeNode*> s;
         s.push(root->left);
         s.push(root->right);
-        while(s)
+        while(!s.empty())
         {
             int p = s.top();
             s.pop();
