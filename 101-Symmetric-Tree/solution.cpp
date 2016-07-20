@@ -16,9 +16,9 @@ public:
         s.push(root->right);
         while(!s.empty())
         {
-            int p = s.top();
+            auto p = s.top();
             s.pop();
-            int q = s.top();
+            auto q = s.top();
             s.pop();
             if(!p && !q) continue;
             if(!p||!q) return false;
