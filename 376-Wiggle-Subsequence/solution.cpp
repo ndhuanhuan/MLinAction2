@@ -24,7 +24,7 @@ public:
                      //correct
                     dp[i+1] = dp[i]+1;
                     maxLength = max(maxLength,dp[i+1]);
-                    increase =1
+                    increase =1;
                 }
                 else
                 {
